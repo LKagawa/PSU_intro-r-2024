@@ -75,7 +75,13 @@ all(b < 3) # tests if all elements of vector are true
 
 # data frames - the key structure for data science, multi-dimensional
 #   collections of vectors
-
+df_test <- data.frame(a = c(3, "Test", 6),
+                      b = b,
+                      c = c) # establishes collection of vectors
+df_test # returns data frame (print)
+df_test$b #references a single column
+df_test$mode <- c("bike", "car", "bus") #adds a vector
+summary(df_test) #summarizes by column
 
 # Special type: factors, and putting it all together ----
 # factors are categorical variables with a fixed set of
