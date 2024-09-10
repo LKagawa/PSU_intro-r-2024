@@ -54,10 +54,24 @@ x ^ 2
 my_var <- (x * 2) # no spaces in variable names
 my_var # returns '6'
 my_var = 6 # also assigns variables, but is not standard nor recommended in R
+xx <- "Test"
 
 
 # data structures ----
 # vectors have a single dimension, like a column or row of data
+a <- c(x, xx, my_var) # assigns items to vector where function c is collector
+b <- c(1, 2, 3)
+b + 1 # adds 1 to each numbers in the vector
+c <- c(1, 4, 6)
+c + 1 # adds 1 to each numbers in the vector
+a + 1 # cannot add to non numeric types (character)
+b < c # compares each corresponding element of the vectors (F, T, T)
+any(b < 3) # tests if each element of the vector are true
+all(b < 3) # tests if all elements of vector are true
+3 %in% a # tests if an element exists in a vector
+!3 %in% c # tests if an element does not exist in a vector
+  3 %not in% c # not a valid statement will produce an error
+
 
 # data frames - the key structure for data science, multi-dimensional
 #   collections of vectors
