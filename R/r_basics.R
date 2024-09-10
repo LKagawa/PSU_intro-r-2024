@@ -3,6 +3,10 @@
 #   little minds"   -Ralph Waldo Emerson 
 
 # Literals ----
+"This is a string literal" # COMMENT: double quotes preferred in R; not required
+42 # numbers are colored different from strings
+T # is True; F is False
+TRUE # is also True; False is False
 
 # Operators ----
 
