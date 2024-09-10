@@ -46,6 +46,14 @@ TRUE # is also True; False is False
     
     
 # variables ----
+x <- "string example x" # assigning a variable
+x # prints the variable "x"
+typeof(x)
+x <- 3 # can override the variable assignment
+x ^ 2
+my_var <- (x * 2) # no spaces in variable names
+my_var # returns '6'
+my_var = 6 # also assigns variables, but is not standard nor recommended in R
 
 
 # data structures ----
