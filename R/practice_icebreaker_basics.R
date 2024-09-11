@@ -50,3 +50,11 @@ survey_results |>
 # Stretch yourself: Repeat the above, but this time filter the data by two 
 #   travel modes (Hint: %in%)
 survey_results |> 
+  filter(
+    travel_mode %in% c("bike", "bus") # not prefered format
+  )
+
+survey_results |>
+  filter(
+    travel_mode == "bike" | travel_mode == "bus" # stop when only one condition is met
+  )
