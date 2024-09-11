@@ -45,3 +45,46 @@ tt_mi_mode_fig <- df_ice |>
   ylab("Travel Distance")
 
 tt_mi_mode_fig
+
+# faceting ----
+ice_facet_fig <- df_ice |>
+  ggplot(aes(x = travel_time,
+             y = travel_distance))+
+  geom_point() +
+  facet_wrap(. ~ travel_mode) # facet Wrap
+
+
+ice_facet_fig <- df_ice |>
+  ggplot(aes(x = travel_time,
+             y = travel_distance))+
+  geom_point() +
+  facet_grid(. ~ travel_mode) # facet grid
+
+
+ice_facet_fig <- df_ice |>
+  ggplot(aes(x = travel_time,
+             y = travel_distance))+
+  geom_point() +
+  facet_grid(. ~ travel_mode ~ ., # GRID
+             scale = "free") # adds scale to "facet"
+
+
+ice_facet_fig <- df_ice |>
+  ggplot(aes(x = travel_time,
+             y = travel_distance))+
+  geom_point() +
+  facet_wrap(. ~ travel_mode ~ ., # WRAP
+             scale = "free") # adds scale to "facet"
+
+
+ice_facet_fig
+
+# pre-processing / filtering with figures ----
+tt_mode_car_fig <- df_ice |>
+  filter(travel_mode == "car") |>
+  ggplot(aes(x = travel_time,
+             y = travel_distance)) +
+  geom_point() +
+  theme_bw()
+
+tt_mode_car_fig
