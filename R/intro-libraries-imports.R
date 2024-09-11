@@ -1,5 +1,3 @@
-#### Transforming Data Part I ####
-
 # Read in csv file using base R
 read.csv("data/portal_stations.csv", stringAsFactors = F) # does not convert characters to vectors 
 # sta_meta <- read.csv("data/portal_stations.csv", stringAsFactors = F) # assigns data to variable
